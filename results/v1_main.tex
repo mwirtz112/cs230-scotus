@@ -1,0 +1,31 @@
+\begin{table}[h]
+  \centering
+  \small
+  \begin{tabular}{lcccc}
+    \toprule
+    Method & Macro-F1 & AUC & Vote acc. & Case acc. \\
+    \midrule
+    Always petitioner & 0.397 {\scriptsize[.375, .419]} & 0.500 & 0.659 & 0.732 \\
+    Justice vote rate & 0.521 {\scriptsize[.503, .539]} & 0.535 & 0.607 & 0.732 \\
+    Question count & 0.626 {\scriptsize[.582, .664]} & 0.700 & 0.631 & 0.528 \\
+    Embedding probe & 0.595 {\scriptsize[.559, .629]} & 0.667 & 0.600 & 0.528 \\
+    Flat ModernBERT, first 8k tokens, frozen (flat\_mb) & 0.580 {\scriptsize[.524, .632]} & 0.617 & 0.596 & 0.585 \\
+    Flat ModernBERT, whole transcript, frozen (flat\_mb\_all) & 0.607 {\scriptsize[.545, .662]} & 0.633 & 0.636 & 0.626 \\
+    Flat ModernBERT, top 4 layers tuned, lr 5e-6 (flat\_mb\_ft) & 0.575 {\scriptsize[.518, .629]} & 0.624 & 0.592 & 0.585 \\
+    Flat ModernBERT, top 4 layers tuned, lr 1e-5 (flat\_mb\_ft\_lr1e5) & 0.577 {\scriptsize[.521, .629]} & 0.625 & 0.595 & 0.569 \\
+    Case profile only, Katz-style forest (katz\_rf) & 0.624 {\scriptsize[.577, .672]} & 0.715 & 0.686 & 0.691 \\
+    Question features, LR (qc\_plus) & 0.675 {\scriptsize[.629, .720]} & 0.780 & 0.684 & 0.585 \\
+    + named colleagues, LR (qc\_bloc) & 0.735 {\scriptsize[.690, .774]} & 0.818 & 0.748 & 0.715 \\
+    + case profile history, LR (qc\_bloc\_meta) & 0.724 {\scriptsize[.683, .765]} & 0.813 & 0.739 & 0.691 \\
+    Model v0 + regularization (milestone) & 0.625 {\scriptsize[.572, .672]} & 0.667 & 0.673 & 0.732 \\
+    Model v1, no text & 0.726 {\scriptsize[.678, .775]} & 0.803 & 0.742 & 0.724 \\
+    Model v1, no bloc layer & 0.712 {\scriptsize[.659, .754]} & 0.793 & 0.740 & 0.772 \\
+    Model v1 (5 seeds) & 0.748 {\scriptsize[.704, .791]} & 0.821 & 0.765 & 0.805 \\
+    Model v1 + metadata prior (fusion, 5 seeds) & 0.756 {\scriptsize[.712, .796]} & 0.822 & 0.771 & 0.772 \\
+    Model v1 + qc\_bloc (mean of logits) & 0.747 {\scriptsize[.700, .788]} & 0.836 & 0.764 & 0.805 \\
+    Model v1 + qc\_bloc\_meta (mean of logits) & 0.751 {\scriptsize[.708, .793]} & 0.837 & 0.767 & 0.789 \\
+    \bottomrule
+  \end{tabular}
+  \caption{Validation (2016--17) results at cutoff 0.5, with 95\% bootstrap CIs over cases for macro-F1.}
+  \label{tab:main}
+\end{table}

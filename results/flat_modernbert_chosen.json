@@ -1,0 +1,14 @@
+{
+ "flat_mb": {
+  "pool": "cls",
+  "hidden": 256,
+  "dropout": 0.2,
+  "epochs": 10
+ },
+ "flat_mb_all": {
+  "pool": "clsall",
+  "hidden": 64,
+  "dropout": 0.5,
+  "epochs": 10
+ }
+}

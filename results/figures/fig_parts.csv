@@ -1,0 +1,13 @@
+model,fold,case,within
+Case profile only (RF),dev,0.5311,0.7428
+Counts + colleagues (LR),dev,0.6847,0.7862
+"v1, no text",dev,0.6827,0.7955
+"v1, no bloc layer",dev,0.696,0.767
+v1,dev,0.708,0.8007
+v1 + case profile,dev,0.7202,0.8011
+Case profile only (RF),val,0.6091,0.8436
+Counts + colleagues (LR),val,0.7431,0.9059
+"v1, no text",val,0.729,0.8926
+"v1, no bloc layer",val,0.8209,0.8528
+v1,val,0.7997,0.9049
+v1 + case profile,val,0.8057,0.9018

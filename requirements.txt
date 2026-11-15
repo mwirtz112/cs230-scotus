@@ -1,0 +1,11 @@
+convokit
+pandas
+pyarrow
+matplotlib
+tabulate
+numpy
+scipy
+scikit-learn
+torch
+transformers
+praat-parselmouth==0.4.7

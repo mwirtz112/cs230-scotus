@@ -1,0 +1,15 @@
+method,decade,auc,votes
+Question count,1950,0.4936,4847
+Question count,1960,0.5234,9576
+Question count,1970,0.5612,11534
+Question count,1980,0.6165,11942
+Question count,1990,0.6218,7932
+Question count,2000,0.6511,6629
+Question count,2010,0.6365,3498
+"Question features (LR, in-sample)",1950,0.5677,4847
+"Question features (LR, in-sample)",1960,0.5647,9576
+"Question features (LR, in-sample)",1970,0.5907,11534
+"Question features (LR, in-sample)",1980,0.6707,11942
+"Question features (LR, in-sample)",1990,0.7232,7932
+"Question features (LR, in-sample)",2000,0.7373,6629
+"Question features (LR, in-sample)",2010,0.7144,3498

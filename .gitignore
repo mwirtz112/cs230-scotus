@@ -1,0 +1,32 @@
+# The public repository holds the code, its results and a small part of the data.
+# Everything else stays on disk only: ignore everything at the top level, then allow
+# back what the repository needs.
+/*
+!/.gitignore
+!/README.md
+!/requirements.txt
+!/pyproject.toml
+!/src/
+!/results/
+!/data/
+
+# data/: only the vote labels (1955-2019), the 2020-2025 tables built from Oyez and the
+# saved predictions. The rest of data/, embeddings/ and checkpoints/ (about 8 GB) are
+# rebuilt by the scripts.
+/data/*
+!/data/cases.parquet
+!/data/votes.parquet
+!/data/ext/
+!/data/preds/
+
+# Raw logs and launcher scripts beside the run records (the per-run JSON files are tracked)
+results/v1_runs/logs/
+results/wf_runs/logs/
+results/flat_runs/logs/
+
+# Caches and packaging
+__pycache__/
+*.pyc
+*.egg-info/
+.ipynb_checkpoints/
+.DS_Store

@@ -1,0 +1,101 @@
+{
+ "name": "v1_fusion",
+ "fold": "wf2022",
+ "seed": 4,
+ "args": {
+  "name": "v1_fusion",
+  "data": "data",
+  "emb": [
+   "embeddings/turns_last.npy"
+  ],
+  "folds": [
+   "dev",
+   "val"
+  ],
+  "seeds": [
+   0,
+   1,
+   2
+  ],
+  "train_start": 1980,
+  "tau": 0,
+  "d": 256,
+  "layers": 2,
+  "heads": 4,
+  "ff": 512,
+  "hidden": 128,
+  "counters": 8,
+  "no_struct": false,
+  "no_wide": false,
+  "no_content": false,
+  "no_identity": false,
+  "no_amicus": false,
+  "stance": null,
+  "no_text": false,
+  "bottleneck": 0,
+  "center_text": false,
+  "bench_layers": 0,
+  "affinity": 4,
+  "aff_rank": 16,
+  "aff_mode": "pair",
+  "aff_unknown": false,
+  "mf_iters": 1,
+  "table_lr_mult": 10.0,
+  "hist": false,
+  "meta": false,
+  "meta_fields": null,
+  "meta_min": 20,
+  "d_meta": 32,
+  "no_meta_concat": false,
+  "ideal": 0,
+  "prior": 1.0,
+  "prior_learn": false,
+  "prior_source": "meta",
+  "meta_protocol": "frozen",
+  "dropout": 0.3,
+  "in_drop": 0.0,
+  "turn_drop": 0.0,
+  "id_drop": 0.1,
+  "min_justice_votes": 0,
+  "stance_aux": 0.0,
+  "case_aux": 0.0,
+  "lr": 0.0003,
+  "wd": 0.1,
+  "bs": 16,
+  "epochs": 6,
+  "save_model": false,
+  "eval_hide_ids": false
+ },
+ "params": 1595518,
+ "train_cases": 3752,
+ "eval_cases": 59,
+ "pos_weight": 0.690315028754644,
+ "secs": 72.15537309646606,
+ "final": {},
+ "history": [
+  {
+   "epoch": 1,
+   "train_loss": 0.502155208003038
+  },
+  {
+   "epoch": 2,
+   "train_loss": 0.4855709795250313
+  },
+  {
+   "epoch": 3,
+   "train_loss": 0.46699174228253393
+  },
+  {
+   "epoch": 4,
+   "train_loss": 0.4503794529798951
+  },
+  {
+   "epoch": 5,
+   "train_loss": 0.43596292037699524
+  },
+  {
+   "epoch": 6,
+   "train_loss": 0.42866054971589207
+  }
+ ]
+}
